@@ -27,9 +27,13 @@ Este projeto **não é oficial da Intelbras**, mas sim um estudo prático com fo
 
 ```text
 QAmobile/
-├── tests/             # Casos de teste principais
-├── resources/         # Keywords reutilizáveis
-└── README.md
+├── resources/               # Recursos reutilizáveis do projeto
+│   └── keywords.resource    # Keywords comuns como abrir app, interações de UI etc.
+│
+├── tests/                   # Casos de teste organizados por fluxo
+│   └── signup.robot         # Testes relacionados ao fluxo de cadastro
+│
+├── README.md                # Documentação do projeto
 ```
 
 ---
