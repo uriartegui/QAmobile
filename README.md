@@ -1,12 +1,14 @@
 # 📱 QAmobile – Testes Automatizados Mobile com Robot Framework
 
-Este projeto tem como objetivo testar funcionalidades do aplicativo **Guardian** da **Intelbras**, automatizando os cenários mobile (Android/iOS) com **Robot Framework** e **Appium**.
+Este projeto tem como objetivo testar funcionalidades do aplicativo **Guardian**, utilizando **Robot Framework** e **Appium** para automação mobile (Android/iOS). É um projeto de **estudo pessoal**, baseado no aplicativo que atuo como QA manualmente na **Intelbras**.
 
 ---
 
 ## 📌 Sobre o Projeto
 
-O **QAmobile** é mantido como parte das atividades de QA da **Squad Apps** da **Intelbras**, equipe responsável pela qualidade dos aplicativos mobile (Android/iOS). Aqui automatizamos testes críticos para garantir estabilidade e confiabilidade no uso real do app **Guardian**.
+O **QAmobile** foi criado com o intuito de aplicar na prática o conhecimento em automação de testes mobile, utilizando como base o aplicativo real **Guardian** da **Intelbras**, o qual testo manualmente como QA na equipe **Squad Apps**.
+
+Este projeto **não é oficial da Intelbras**, mas sim um estudo prático com foco em desenvolvimento e aprendizado.
 
 ---
 
@@ -37,16 +39,16 @@ QAmobile/
 
 ## 🎯 Objetivos do Projeto
 
-- Garantir a qualidade contínua do app **Guardian**
-- Automatizar os principais fluxos: login, registro, erros de validação etc.
-- Aplicar boas práticas de organização e manutenção dos testes
-- Padronizar execução e estrutura dos testes automatizados mobile
+- Praticar e aplicar automação de testes mobile com Appium e Robot Framework
+- Reproduzir cenários reais do aplicativo Guardian
+- Organizar os testes de forma reutilizável e escalável
+- Servir como base de aprendizado contínuo em automação mobile
 
 ---
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **Uriarte**, QA da equipe **Squad Apps** na **Intelbras**, focado em testes automatizados de aplicações mobile Android/iOS.
+Desenvolvido por **Uriarte**, QA da equipe **Squad Apps** na **Intelbras**, atuando com testes mobile Android/iOS e apaixonado por automação.
 
 - GitHub: [@uriartegui](https://github.com/uriartegui)
 - LinkedIn: [linkedin.com/in/uriartegui19](https://www.linkedin.com/in/uriartegui19)
