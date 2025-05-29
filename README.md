@@ -1,29 +1,29 @@
-# QAmobile
+# QAx
 
-Automação de testes para aplicativos móveis utilizando Robot Framework e Appium.
+Projeto de Quality Assurance (QA) focado em automação de testes para aplicações web, garantindo qualidade e confiabilidade do software.
 
-## 🚀 Objetivo
+## 🎯 Objetivos
 
-Este projeto visa automatizar os testes de aplicativos móveis, garantindo qualidade e eficiência no processo de desenvolvimento.
+- Garantir a qualidade e estabilidade do sistema web.
+- Automatizar processos repetitivos de validação.
+- Documentar casos de testes e resultados.
+- Facilitar a detecção precoce de bugs.
+- Garantir que novas funcionalidades não quebrem fluxos existentes (testes de regressão).
 
 ## 🛠 Tecnologias Utilizadas
 
-- **Linguagem**: Python
-- **Framework de Testes**: Robot Framework
-- **Automação Mobile**: Appium
+- **Linguagem**: Python  
+- **Framework de Testes**: Robot Framework  
+- **Automação Web**: SeleniumLibrary
 
 ## 📁 Estrutura do Repositório
 
-- `tests/`: Contém os casos de teste organizados por funcionalidades.
-- `resources/`: Armazena as keywords reutilizáveis para os testes.
+- `projects/`: Contém os projetos de teste, como o `walkdog-robot`.
 - `README.md`: Este arquivo de documentação.
 
 ## 📋 Casos de Teste Implementados
 
-- Registro de nova conta válida
-- Login com conta válida
-- Login com e-mail inválido
-- Login com senha inválida
+- Testes de funcionalidade para aplicações web, como o projeto `walkdog-robot`.
 
 ## 📬 Contato
 
