@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-29T12:31:02.415695" rpa="false" schemaversion="5">
+<suite id="s1" name="Signup" source="C:\Users\gu062480\QAmobile\projects\guardian\signup.robot">
+<test id="s1-t1" name="Listar Contextos Disponiveis" line="42">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=RXCW30BYHNL</arg>
+<arg>app=C:/Users/gu062480/QAmobile/projects/guardian/base.apk</arg>
+<arg>automationName=UiAutomator2</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-05-29T12:31:02.706775" elapsed="15.315935"/>
+</kw>
+<kw name="Get Contexts" owner="AppiumLibrary">
+<msg time="2025-05-29T12:31:20.144995" level="INFO">['NATIVE_APP']</msg>
+<msg time="2025-05-29T12:31:20.145135" level="INFO">${contexts} = ['NATIVE_APP']</msg>
+<var>${contexts}</var>
+<doc>Get available contexts.</doc>
+<status status="PASS" start="2025-05-29T12:31:18.023247" elapsed="2.121919"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-05-29T12:31:20.145698" level="INFO">Contextos disponíveis: ['NATIVE_APP']</msg>
+<arg>Contextos disponíveis: ${contexts}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-05-29T12:31:20.145510" elapsed="0.000236"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2025-05-29T12:31:20.145980" elapsed="0.925349"/>
+</kw>
+<tag>webview</tag>
+<status status="PASS" start="2025-05-29T12:31:02.705826" elapsed="18.365908"/>
+</test>
+<status status="PASS" start="2025-05-29T12:31:02.418597" elapsed="18.654133"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">webview</stat>
+</tag>
+<suite>
+<stat name="Signup" id="s1" pass="1" fail="0" skip="0">Signup</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
