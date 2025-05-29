@@ -29,5 +29,5 @@ Projeto de Quality Assurance (QA) focado em automação de testes para aplicaç�
 
 Para dúvidas ou contribuições, entre em contato:
 
-- Email: [guiuriarte@gmail.com](mailto:guiuriarte@gmail.com)  
+- Email: [guiuriartedev@gmail.com](mailto:guiuriartedev@gmail.com)
 - GitHub: [@uriartegui](https://github.com/uriartegui)
