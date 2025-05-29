@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-29T14:21:57.818120" rpa="false" schemaversion="5">
+<suite id="s1" name="Signup" source="C:\Users\gu062480\QAmobile\projects\guardian\signup.robot">
+<test id="s1-t1" name="Login Nativo Guardian" line="11">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>app=${APP}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-05-29T14:21:58.154902" elapsed="22.533511"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-29T14:22:23.443355" level="INFO">criteria is br.com.intelbras.guardian.beta:id/loginButton
+criteria is br.com.intelbras.guardian.beta:id/loginButton
+criteria is br.com.intelbras.guardian.beta:id/loginButton
+criteria is br.com.intelbras.guardian.beta:id/loginButton
+criteria is br.com.intelbras.guardian.beta:id/loginButton
+criteria is br.com.intelbras.guardian.beta:id/loginButton
+criteria is br.com.intelbras.guardian.beta:id/loginButton</msg>
+<arg>id=br.com.intelbras.guardian.beta:id/loginButton</arg>
+<arg>40s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-29T14:22:20.688858" elapsed="2.754592"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-29T14:22:23.444722" level="INFO">Clicking element 'id=br.com.intelbras.guardian.beta:id/loginButton'.</msg>
+<msg time="2025-05-29T14:22:23.559130" level="INFO">criteria is br.com.intelbras.guardian.beta:id/loginButton</msg>
+<arg>id=br.com.intelbras.guardian.beta:id/loginButton</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-29T14:22:23.443770" elapsed="0.115438"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-29T14:22:29.469883" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="usernameUserInput"]
+xpath criteria: //android.widget.EditText[@resource-id="usernameUserInput"]
+xpath criteria: //android.widget.EditText[@resource-id="usernameUserInput"]
+xpath criteria: //android.widget.EditText[@resource-id="usernameUserInput"]
+xpath criteria: //android.widget.EditText[@resource-id="usernameUserInput"]
+xpath criteria: //android.widget.EditText[@resource-id="usernameUserInput"]</msg>
+<arg>xpath=//android.widget.EditText[@resource-id="usernameUserInput"]</arg>
+<arg>40s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-29T14:22:23.559527" elapsed="5.910434"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-05-29T14:22:29.471369" level="INFO">Typing text 'guiuriartedevv@gmail.com' into text field 'xpath=//android.widget.EditText[@resource-id="usernameUserInput"]'</msg>
+<msg time="2025-05-29T14:22:30.045233" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="usernameUserInput"]</msg>
+<arg>xpath=//android.widget.EditText[@resource-id="usernameUserInput"]</arg>
+<arg>guiuriartedevv@gmail.com</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-05-29T14:22:29.470308" elapsed="0.574998"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-29T14:22:30.651336" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="password"]</msg>
+<arg>xpath=//android.widget.EditText[@resource-id="password"]</arg>
+<arg>40s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-29T14:22:30.045640" elapsed="0.605785"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-05-29T14:22:30.652658" level="INFO">Typing text 'Intelbras90@@' into text field 'xpath=//android.widget.EditText[@resource-id="password"]'</msg>
+<msg time="2025-05-29T14:22:31.184314" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="password"]</msg>
+<arg>xpath=//android.widget.EditText[@resource-id="password"]</arg>
+<arg>Intelbras90@@</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-05-29T14:22:30.651772" elapsed="0.532620"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-29T14:22:31.686996" level="INFO">xpath criteria: //android.widget.Button[@text="Entrar"]</msg>
+<arg>xpath=//android.widget.Button[@text="Entrar"]</arg>
+<arg>40s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-29T14:22:31.184699" elapsed="0.502370"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-29T14:22:31.688281" level="INFO">Clicking element 'xpath=//android.widget.Button[@text="Entrar"]'.</msg>
+<msg time="2025-05-29T14:22:32.117817" level="INFO">xpath criteria: //android.widget.Button[@text="Entrar"]</msg>
+<arg>xpath=//android.widget.Button[@text="Entrar"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-29T14:22:31.687402" elapsed="0.430489"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-29T14:22:40.192626" level="INFO">criteria is br.com.intelbras.guardian.beta:id/titleView
+criteria is br.com.intelbras.guardian.beta:id/titleView
+criteria is br.com.intelbras.guardian.beta:id/titleView
+criteria is br.com.intelbras.guardian.beta:id/titleView
+criteria is br.com.intelbras.guardian.beta:id/titleView
+criteria is br.com.intelbras.guardian.beta:id/titleView
+criteria is br.com.intelbras.guardian.beta:id/titleView
+criteria is br.com.intelbras.guardian.beta:id/titleView
+criteria is br.com.intelbras.guardian.beta:id/titleView
+criteria is br.com.intelbras.guardian.beta:id/titleView
+criteria is br.com.intelbras.guardian.beta:id/titleView
+criteria is br.com.intelbras.guardian.beta:id/titleView
+criteria is br.com.intelbras.guardian.beta:id/titleView
+criteria is br.com.intelbras.guardian.beta:id/titleView</msg>
+<arg>id=br.com.intelbras.guardian.beta:id/titleView</arg>
+<arg>40s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-29T14:22:32.118462" elapsed="8.074246"/>
+</kw>
+<kw name="Element Should Contain Text" owner="AppiumLibrary">
+<msg time="2025-05-29T14:22:40.193969" level="INFO">Verifying element 'id=br.com.intelbras.guardian.beta:id/titleView' contains text 'Olá'.</msg>
+<msg time="2025-05-29T14:22:40.259842" level="INFO">criteria is br.com.intelbras.guardian.beta:id/titleView</msg>
+<arg>id=br.com.intelbras.guardian.beta:id/titleView</arg>
+<arg>Olá</arg>
+<doc>Verifies element identified by ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-05-29T14:22:40.193017" elapsed="0.066902"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-29T14:22:43.162103" level="INFO">xpath criteria: //android.widget.Button[@resource-id="br.com.intelbras.guardian.beta:id/continueButton"]
+xpath criteria: //android.widget.Button[@resource-id="br.com.intelbras.guardian.beta:id/continueButton"]
+xpath criteria: //android.widget.Button[@resource-id="br.com.intelbras.guardian.beta:id/continueButton"]
+xpath criteria: //android.widget.Button[@resource-id="br.com.intelbras.guardian.beta:id/continueButton"]
+xpath criteria: //android.widget.Button[@resource-id="br.com.intelbras.guardian.beta:id/continueButton"]
+xpath criteria: //android.widget.Button[@resource-id="br.com.intelbras.guardian.beta:id/continueButton"]
+xpath criteria: //android.widget.Button[@resource-id="br.com.intelbras.guardian.beta:id/continueButton"]</msg>
+<arg>xpath=//android.widget.Button[@resource-id="br.com.intelbras.guardian.beta:id/continueButton"]</arg>
+<arg>40s</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-29T14:22:40.260258" elapsed="2.902267"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-29T14:22:43.164032" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id="br.com.intelbras.guardian.beta:id/continueButton"]'.</msg>
+<msg time="2025-05-29T14:22:43.362223" level="INFO">xpath criteria: //android.widget.Button[@resource-id="br.com.intelbras.guardian.beta:id/continueButton"]</msg>
+<arg>xpath=//android.widget.Button[@resource-id="br.com.intelbras.guardian.beta:id/continueButton"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-29T14:22:43.162875" elapsed="0.199422"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-29T14:22:53.363176" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-29T14:22:43.362631" elapsed="10.000650"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2025-05-29T14:22:53.363708" elapsed="0.528627"/>
+</kw>
+<status status="PASS" start="2025-05-29T14:21:58.154029" elapsed="55.738668"/>
+</test>
+<status status="PASS" start="2025-05-29T14:21:57.820750" elapsed="56.072888"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Signup" id="s1" pass="1" fail="0" skip="0">Signup</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
