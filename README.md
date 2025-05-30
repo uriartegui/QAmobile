@@ -12,6 +12,17 @@ Este projeto **não é oficial da Intelbras**, mas sim um estudo prático com fo
 
 ---
 
+## 🆕 Última Release
+
+**Versão 1.1.0 – Automação Completa dos Testes de Autenticação e Registro do Aplicativo Guardian**
+
+- Automação completa da tela de login, registro e recuperação de senha.
+- Novos casos de teste automatizados que cobrem integralmente os fluxos de autenticação e navegação inicial.
+- Inclusão da página `signup.robot` com testes organizados para o fluxo de cadastro.
+- Casos de teste para login válido, login inválido, registro com dados válidos e inválidos, checagem dos botões de autenticação e recuperação de senha.
+
+---
+
 ## 🧪 Tecnologias e Ferramentas Utilizadas
 
 - ✅ **Robot Framework**
