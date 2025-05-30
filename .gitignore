@@ -1,4 +1,59 @@
-# Arquivos que não devem ser versionados
-base.apk
-interactive_console_output.xml
+# Arquivos e pastas do sistema
+*.log
+*.tmp
+*.swp
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Arquivos do Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+*.egg
+
+# Arquivos de testes e relatórios do Robot Framework
+output.xml
+log.html
+report.html
+*.log.html
+*.report.html
+*.output.xml
+*.robot.xml
+
+# Diretórios comuns para resultados e screenshots
+results/
 logs/
+screenshots/
+
+# Arquivos gerados por Appium / Android
+*.apk
+*.apks
+*.aab
+*.keystore
+*.gradle/
+.idea/
+*.iml
+
+# Arquivos de configuração local
+.vscode/
+*.code-workspace
+
+# Arquivos do Windows
+*.bak
+*.orig
+
+# Node (caso use alguma lib npm para testes)
+node_modules/
+
+# Arquivos de dependências / pacotes
+*.lock
+*.tar.gz
+*.zip
