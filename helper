@@ -1,0 +1,10 @@
+helper
+
+---
+
+{
+  "platformName": "Android",
+  "appium:automationName": "UiAutomator2"
+}
+
+---
