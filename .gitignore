@@ -1,1 +1,4 @@
-
+# Arquivos que não devem ser versionados
+base.apk
+interactive_console_output.xml
+logs/
