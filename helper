@@ -1,10 +1,32 @@
-helper
+# Informações Gerais do Projeto QAmobile
 
----
+## Appium
 
 {
   "platformName": "Android",
   "appium:automationName": "UiAutomator2"
 }
 
----
+## Server Appium ( no cmd )
+
+appium
+
+# Executar um teste específico e gerar logs:
+robot -d ./logs tests/signup.robot
+
+# Executar todos os testes e gerar logs:
+robot -d ./logs tests
+
+## json Appium
+
+{
+  "platformName": "Android",
+  "appium:automationName": "UiAutomator2"
+}
+
+## Baixar ( extrair ) o APK instalado no celular
+
+1. adb devices
+2. adb shell dumpsys window | findstr mCurrentFocus
+3. adb shell pm path br.com.intelbras.guardian
+4. adb pull /data/app/br.com.intelbras.guardian-hxIvvq0p1RUFv6E5WdRCxA==/base.apk
