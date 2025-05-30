@@ -83,8 +83,8 @@ Register successfully
 
     Button register
 
-    #    Check no campo de email
-    Wait Until Element Is Visible    xpath=//android.webkit.WebView[@text="Conta Intelbras - O que você precisa em um só lugar"]/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.EditText    20s
+    #    Check no campo aceitação de termos
+    Wait Until Element Is Visible    xpath=//android.widget.CheckBox[contains(@text, "Termos de uso")]    20s
     #    Gerar e-mail aleatorio após garantir que o campo está visível
     ${timestamp}=    Get Time    epoch
     ${email}=    Set Variable    teste${timestamp}@gmail.com
