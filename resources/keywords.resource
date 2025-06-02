@@ -1,6 +1,6 @@
 *** Keywords ***
 Open app
-    Open Application    http://localhost:4723/wd/hub
+    Open Application    http://localhost:4723
     ...    platformName=${PLATFORM_NAME}    
     ...    deviceName=${DEVICE_NAME}    
     ...    app=${APP}    
@@ -12,7 +12,7 @@ Open app
     ...    androidInstallTimeout=120000
 
 Open app signup
-    Open Application    http://localhost:4723/wd/hub
+    Open Application    http://localhost:4723
     ...    platformName=${PLATFORM_NAME}    
     ...    deviceName=${DEVICE_NAME}    
     ...    app=${APP}    
@@ -77,3 +77,8 @@ Logo dashboard view
 Button menu
     Wait Until Element Is Visible    accessibility_id=BOTTOM_NAV_BUTTON-Menu    40s
     Click Element    accessibility_id=BOTTOM_NAV_BUTTON-Menu
+
+Clicar se estiver visível
+    [Arguments]    ${element_id}    ${timeout}=5s
+    ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    ${element_id}    ${timeout}
+    Run Keyword If    '${status}' == 'PASS'    Click Element    ${element_id}

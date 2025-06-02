@@ -12,8 +12,8 @@ Library    OperatingSystem
 
 *** Variables ***
 ${PLATFORM_NAME}        Android        #    Sistema operacional
-${DEVICE_NAME}          RXCW30BYHNL    #    Device do celular
-${APP}                  C:/Users/gu062480/QAmobile/base.apk        #    Diretorio do app
+${DEVICE_NAME}          4d73cef8    #    Device do celular
+${APP}                  C:/Users/uriarte/QAmobile/base.apk        #    Diretorio do app
 ${AUTOMATION_NAME}      UiAutomator2        #    Nome do Automation
 
 *** Test Cases ***
@@ -77,14 +77,14 @@ QTJH1F4 - Incluir dispositivo em um grupo
     Wait Until Element Is Visible    accessibility_id=POPUP_VIDEO-VIPW-1300-MINI-SD    40s
     Click Element    accessibility_id=POPUP_VIDEO-VIPW-1300-MINI-SD
 
-    Wait Until Element Is Visible    xpath=(//android.widget.LinearLayout[@resource-id="br.com.intelbras.guardian:id/content"])[6]    40s
-    Click Element    xpath=(//android.widget.LinearLayout[@resource-id="br.com.intelbras.guardian:id/content"])[6]
+    Wait Until Element Is Visible    accessibility_id=ADD_TO_GROUP_VIDEO-VIPW-1300-MINI-SD    40s
+    Click Element    accessibility_id=ADD_TO_GROUP_VIDEO-VIPW-1300-MINI-SD
 
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[@resource-id="br.com.intelbras.guardian:id/title" and @text="teste123"]    40s
-    Click Element    xpath=//android.widget.TextView[@resource-id="br.com.intelbras.guardian:id/title" and @text="teste123"]
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/groupView    40s
+    Click Element    id=br.com.intelbras.guardian:id/groupView
 
-    Wait Until Element Is Visible    xpath=//android.widget.Button[@resource-id="br.com.intelbras.guardian:id/confirm"]    40s
-    Click Element    xpath=//android.widget.Button[@resource-id="br.com.intelbras.guardian:id/confirm"]
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/confirm    40s
+    Click Element    id=br.com.intelbras.guardian:id/confirm
 
     Logo dashboard view
     

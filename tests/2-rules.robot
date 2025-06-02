@@ -3,6 +3,7 @@ Library    AppiumLibrary
 
 Resource   ../resources/keywords.resource
 Resource   ../resources/keywords.resource
+Resource    ../resources/keywords.resource
 
 Library    String
 Library    DateTime
@@ -12,8 +13,8 @@ Library    OperatingSystem
 
 *** Variables ***
 ${PLATFORM_NAME}        Android        #    Sistema operacional
-${DEVICE_NAME}          RXCW30BYHNL    #    Device do celular
-${APP}                  C:/Users/gu062480/QAmobile/base.apk        #    Diretorio do app
+${DEVICE_NAME}          4d73cef8    #    Device do celular
+${APP}                  C:/Users/uriarte/QAmobile/base.apk        #    Diretorio do app
 ${AUTOMATION_NAME}      UiAutomator2        #    Nome do Automation
 
 *** Test Cases ***
@@ -103,13 +104,32 @@ NDAFVG6 - Verificar evento de disparo com associação
 
     Open app
 
+    Wait Until Element Is Visible    accessibility_id=DEACTIVATE_ALARM-AMT 2018 E/EG    40s
+    Click Element    accessibility_id=DEACTIVATE_ALARM-AMT 2018 E/EG
+
+    ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    id=android:id/button1    10s
+    Run Keyword If    '${status}' == 'PASS'    Click Element    id=android:id/button1
+
+    Wait Until Element Is Visible    accessibility_id=ACTIVATE_ALARM-AMT 2018 E/EG    40s
+    Click Element    accessibility_id=ACTIVATE_ALARM-AMT 2018 E/EG
+
+    ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    id=android:id/button1    10s
+    Run Keyword If    '${status}' == 'PASS'    Click Element    id=android:id/button1
+
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/alertTitle    40s
+
+    Wait Until Element Is Visible    id=android:id/button1    40s
+    Click Element    id=android:id/button1
+
     
 
     Wait Until Element Is Visible    accessibility_id=BOTTOM_NAV_BUTTON-Eventos    40s
     Click Element    accessibility_id=BOTTOM_NAV_BUTTON-Eventos
 
+    ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    id=android:id/button1    5s
+    Run Keyword If    '${status}' == 'PASS'    Click Element    id=android:id/button1
 
-
+    Close app
 
 Remove rule
     [Tags]        remove-rule
@@ -136,13 +156,6 @@ Remove rule
     Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/intelbrasLogo    40s
 
     Close app
-
-    	
-
-
-
-    
-
     
 
     
