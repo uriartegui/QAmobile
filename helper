@@ -30,3 +30,12 @@ robot -d ./logs tests
 2. adb shell dumpsys window | findstr mCurrentFocus
 3. adb shell pm path br.com.intelbras.guardian
 4. adb pull /data/app/br.com.intelbras.guardian-hxIvvq0p1RUFv6E5WdRCxA==/base.apk
+
+## Conta
+guiuriarteautomatizado@gmail.com
+
+## Ordem de prioridade ideal para identificar elementos
+
+1. ✅ accessibility_id
+2. ✅ id (resource-id)
+3. ⚠️ xpath (evite se possível)

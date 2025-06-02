@@ -1,6 +1,6 @@
 *** Keywords ***
 Open app
-    Open Application    http://localhost:4723
+    Open Application    http://localhost:4723/wd/hub
     ...    platformName=${PLATFORM_NAME}    
     ...    deviceName=${DEVICE_NAME}    
     ...    app=${APP}    
@@ -12,7 +12,7 @@ Open app
     ...    androidInstallTimeout=120000
 
 Open app signup
-    Open Application    http://localhost:4723
+    Open Application    http://localhost:4723/wd/hub
     ...    platformName=${PLATFORM_NAME}    
     ...    deviceName=${DEVICE_NAME}    
     ...    app=${APP}    
@@ -45,11 +45,11 @@ Login sucessed
     
     #    Check no campo de email e digita após o check
     Wait Until Element Is Visible    xpath=//android.webkit.WebView[@text="Conta Intelbras - O que você precisa em um só lugar"]/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.EditText    40s
-    Input Text    xpath=//android.webkit.WebView[@text="Conta Intelbras - O que você precisa em um só lugar"]/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.EditText    guiuriarte@gmail.com
+    Input Text    xpath=//android.webkit.WebView[@text="Conta Intelbras - O que você precisa em um só lugar"]/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View[1]/android.widget.EditText    guiuriarteautomatizado@gmail.com
 
     #    Check no campo de senha e digita após o check
     Wait Until Element Is Visible    xpath=//android.webkit.WebView[@text="Conta Intelbras - O que você precisa em um só lugar"]/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View[2]/android.widget.EditText    40s
-    Input Text    xpath=//android.webkit.WebView[@text="Conta Intelbras - O que você precisa em um só lugar"]/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View[2]/android.widget.EditText    Intelbras90@
+    Input Text    xpath=//android.webkit.WebView[@text="Conta Intelbras - O que você precisa em um só lugar"]/android.view.View[2]/android.view.View/android.view.View[2]/android.view.View[2]/android.widget.EditText    Intelbras90@@
     
     #    Check no botão de entrar e click após o check
     Wait Until Element Is Visible    xpath=//android.widget.Button[@text="Entrar"]    40s
@@ -63,9 +63,17 @@ Login sucessed
     Wait Until Element Is Visible    xpath=//android.widget.Button[@resource-id="br.com.intelbras.guardian:id/startToUseButton"]    40s
     Click Element    xpath=//android.widget.Button[@resource-id="br.com.intelbras.guardian:id/startToUseButton"]
 
+    #    Permissão opcional (ex: notificações) — só clica se aparecer
+    ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    id=com.android.permissioncontroller:id/permission_allow_button    5s
+    Run Keyword If    '${status}' == 'PASS'    Click Element    id=com.android.permissioncontroller:id/permission_allow_button
+
 Button add
-    Wait Until Element Is Visible    xpath=//android.widget.LinearLayout[@content-desc="BOTTOM_NAV_BUTTON-Adicionar"]    40s
-    Click Element    xpath=//android.widget.LinearLayout[@content-desc="BOTTOM_NAV_BUTTON-Adicionar"]
+    Wait Until Element Is Visible    accessibility_id=BOTTOM_NAV_BUTTON-Adicionar    40s
+    Click Element    accessibility_id=BOTTOM_NAV_BUTTON-Adicionar
 
 Logo dashboard view
     Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/intelbrasLogoView    40s
+
+Button menu
+    Wait Until Element Is Visible    accessibility_id=BOTTOM_NAV_BUTTON-Menu    40s
+    Click Element    accessibility_id=BOTTOM_NAV_BUTTON-Menu
