@@ -13,7 +13,7 @@ Library    OperatingSystem
 
 *** Variables ***
 ${PLATFORM_NAME}        Android        #    Sistema operacional
-${DEVICE_NAME}          4d73cef8    #    Device do celular
+${DEVICE_NAME}          emulator-5554    #    Device do celular
 ${APP}                  C:/Users/uriarte/QAmobile/base.apk        #    Diretorio do app
 ${AUTOMATION_NAME}      UiAutomator2        #    Nome do Automation
 
@@ -104,30 +104,81 @@ NDAFVG6 - Verificar evento de disparo com associação
 
     Open app
 
-    Wait Until Element Is Visible    accessibility_id=DEACTIVATE_ALARM-AMT 2018 E/EG    40s
-    Click Element    accessibility_id=DEACTIVATE_ALARM-AMT 2018 E/EG
+    Wait Until Element Is Visible    accessibility_id=ACTIVATE_ALARM-AMT 2018 E/EG    40s
+    Click Element    accessibility_id=ACTIVATE_ALARM-AMT 2018 E/EG
+
+    Sleep    2s
 
     ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    id=android:id/button1    10s
     Run Keyword If    '${status}' == 'PASS'    Click Element    id=android:id/button1
+
+    Sleep    2s
+
+    Wait Until Element Is Visible    accessibility_id=DEACTIVATE_ALARM-AMT 2018 E/EG    40s
+    Click Element    accessibility_id=DEACTIVATE_ALARM-AMT 2018 E/EG
+
+    Sleep    2s
+
+    ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    id=android:id/button1    10s
+    Run Keyword If    '${status}' == 'PASS'    Click Element    id=android:id/button1
+
+    Sleep    2s
+
+    Wait Until Element Is Visible    accessibility_id=SECTORS_ALARM-AMT 2018 E/EG    40s
+    Click Element    accessibility_id=SECTORS_ALARM-AMT 2018 E/EG
+
+    Wait Until Element Is Visible    accessibility_id=SECTOR-Setor 2    40s
+    Click Element    accessibility_id=SECTOR-Setor 2
+
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/bypassSwitch    40s
+    Click Element    id=br.com.intelbras.guardian:id/bypassSwitch
+
+    Sleep    2s
+
+    Wait Until Element Is Visible    accessibility_id=Navegar para cima    40s
+    Click Element    accessibility_id=Navegar para cima
+
+    Sleep    2s
+
+    Wait Until Element Is Visible    accessibility_id=Navegar para cima    40s
+    Click Element    accessibility_id=Navegar para cima
+
+    Sleep    2s
 
     Wait Until Element Is Visible    accessibility_id=ACTIVATE_ALARM-AMT 2018 E/EG    40s
     Click Element    accessibility_id=ACTIVATE_ALARM-AMT 2018 E/EG
 
+    Sleep    2s
+
     ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    id=android:id/button1    10s
     Run Keyword If    '${status}' == 'PASS'    Click Element    id=android:id/button1
 
-    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/alertTitle    40s
-
-    Wait Until Element Is Visible    id=android:id/button1    40s
-    Click Element    id=android:id/button1
-
-    
+    Sleep    7s
 
     Wait Until Element Is Visible    accessibility_id=BOTTOM_NAV_BUTTON-Eventos    40s
     Click Element    accessibility_id=BOTTOM_NAV_BUTTON-Eventos
 
+    Sleep    2s
+
     ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    id=android:id/button1    5s
     Run Keyword If    '${status}' == 'PASS'    Click Element    id=android:id/button1
+
+    Sleep    2s
+
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/thumbnail    40s
+    Click Element    id=br.com.intelbras.guardian:id/thumbnail
+
+    Sleep    2s
+
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/deactivateAlarmButton    40s
+
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/dialToEmergencyButton    40s
+
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/playerButton    40s
+
+    Wait Until Element Is Visible    accessibility_id=VIDEO_DOWNLOAD_EVENT    40s
+
+    Wait Until Element Is Visible    accessibility_id=VIDEO_SHARE_EVENT    40s
 
     Close app
 
