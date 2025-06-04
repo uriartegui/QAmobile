@@ -13,8 +13,8 @@ Library    OperatingSystem
 
 *** Variables ***
 ${PLATFORM_NAME}        Android        #    Sistema operacional
-${DEVICE_NAME}          4d73cef8    #    Device do celular
-${APP}                  C:/Users/uriarte/QAmobile/base.apk        #    Diretorio do app
+${DEVICE_NAME}          RXCW30BYHNL    #    Device do celular
+${APP}                  C:/Users/gu062480/QAmobile/base.apk        #    Diretorio do app
 ${AUTOMATION_NAME}      UiAutomator2        #    Nome do Automation
 
 *** Test Cases ***
@@ -26,6 +26,14 @@ Login successfully
     Login sucessed
     
     Logo dashboard view
+
+    Wait Until Element Is Visible    accessibility_id=ACTIVATE_ALARM-AMT 2018 E/EG    60s
+    Click Element    accessibility_id=ACTIVATE_ALARM-AMT 2018 E/EG
+
+    Sleep    60s
+
+    ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    id=android:id/button1    60s
+    Run Keyword If    '${status}' == 'PASS'    Click Element    id=android:id/button1
 
     Close app
 
@@ -107,27 +115,71 @@ NDAFVG6 - Verificar evento de disparo com associação
     Wait Until Element Is Visible    accessibility_id=DEACTIVATE_ALARM-AMT 2018 E/EG    40s
     Click Element    accessibility_id=DEACTIVATE_ALARM-AMT 2018 E/EG
 
-    ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    id=android:id/button1    10s
+    Sleep    60s
+
+    ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    id=android:id/button1    60s
     Run Keyword If    '${status}' == 'PASS'    Click Element    id=android:id/button1
+
+    Wait Until Element Is Visible    accessibility_id=SECTORS_ALARM-AMT 2018 E/EG    40s
+    Click Element    accessibility_id=SECTORS_ALARM-AMT 2018 E/EG
+
+    Wait Until Element Is Visible    accessibility_id=SECTOR-Setor 2    40s
+    Click Element    accessibility_id=SECTOR-Setor 2
+
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/bypassSwitch    40s
+    Click Element    id=br.com.intelbras.guardian:id/bypassSwitch
+
+    Wait Until Element Is Visible    accessibility_id=Navegar para cima    40s
+    Click Element    accessibility_id=Navegar para cima
+
+    Sleep    5s
+
+    Wait Until Element Is Visible    accessibility_id=Navegar para cima    40s
+    Click Element    accessibility_id=Navegar para cima
+
+    Logo dashboard view
 
     Wait Until Element Is Visible    accessibility_id=ACTIVATE_ALARM-AMT 2018 E/EG    40s
     Click Element    accessibility_id=ACTIVATE_ALARM-AMT 2018 E/EG
 
-    ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    id=android:id/button1    10s
+    ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    id=android:id/button1    60s
     Run Keyword If    '${status}' == 'PASS'    Click Element    id=android:id/button1
 
-    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/alertTitle    40s
-
-    Wait Until Element Is Visible    id=android:id/button1    40s
-    Click Element    id=android:id/button1
-
-    
+    Sleep    10s
 
     Wait Until Element Is Visible    accessibility_id=BOTTOM_NAV_BUTTON-Eventos    40s
     Click Element    accessibility_id=BOTTOM_NAV_BUTTON-Eventos
 
-    ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    id=android:id/button1    5s
+    ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    id=android:id/button1    60s
     Run Keyword If    '${status}' == 'PASS'    Click Element    id=android:id/button1
+
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/thumbnail    40s
+    Click Element    id=br.com.intelbras.guardian:id/thumbnail
+
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/eventChip    40s
+
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/eventDateLabel    40s
+
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/eventHourLabel    40s
+
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/eventTypeLabel    40s
+
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/thumbnail   40s
+
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/downloadButton   40s
+
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/shareButton    40s
+
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/playerButton    40s
+
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/deactivateAlarmButton    40s
+
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/dialToEmergencyButton    40s
+
+    Wait Until Element Is Visible    accessibility_id=Navegar para cima    40s
+    Click Element    accessibility_id=Navegar para cima
+
+    Wait Until Element Is Visible    accessibility_id=BOTTOM_NAV_BUTTON-Eventos    40s
 
     Close app
 

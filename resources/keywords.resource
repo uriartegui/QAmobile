@@ -1,6 +1,6 @@
 *** Keywords ***
 Open app
-    Open Application    http://localhost:4723
+    Open Application    http://localhost:4723/wd/hub
     ...    platformName=${PLATFORM_NAME}    
     ...    deviceName=${DEVICE_NAME}    
     ...    app=${APP}    
@@ -10,9 +10,11 @@ Open app
     ...    uiautomator2ServerLaunchTimeout=60000
     ...    adbExecTimeout=60000
     ...    androidInstallTimeout=120000
+    ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    xpath=//android.widget.Button[@text='Atualizar']    10s
+    Run Keyword If    '${status}' == 'PASS'    Press Keycode    4
 
 Open app signup
-    Open Application    http://localhost:4723
+    Open Application    http://localhost:4723/wd/hub
     ...    platformName=${PLATFORM_NAME}    
     ...    deviceName=${DEVICE_NAME}    
     ...    app=${APP}    
@@ -21,6 +23,9 @@ Open app signup
     ...    uiautomator2ServerLaunchTimeout=60000
     ...    adbExecTimeout=60000
     ...    androidInstallTimeout=120000
+    
+    ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    xpath=//android.widget.Button[@text='Atualizar']    10s
+    Run Keyword If    '${status}' == 'PASS'    Press Keycode    4
 
 Close app
     Close Application
@@ -62,6 +67,9 @@ Login sucessed
     #    Check no botão de novidade e após click
     Wait Until Element Is Visible    xpath=//android.widget.Button[@resource-id="br.com.intelbras.guardian:id/startToUseButton"]    40s
     Click Element    xpath=//android.widget.Button[@resource-id="br.com.intelbras.guardian:id/startToUseButton"]
+
+    ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    xpath=//android.widget.Button[@text='Atualizar']    10s
+    Run Keyword If    '${status}' == 'PASS'    Press Keycode    4
 
     #    Permissão opcional (ex: notificações) — só clica se aparecer
     ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    id=com.android.permissioncontroller:id/permission_allow_button    5s
