@@ -1,6 +1,6 @@
 *** Keywords ***
 Open app
-    Open Application    http://localhost:4723/wd/hub
+    Open Application    http://localhost:4723
     ...    platformName=${PLATFORM_NAME}    
     ...    deviceName=${DEVICE_NAME}    
     ...    app=${APP}    
@@ -14,7 +14,7 @@ Open app
     Run Keyword If    '${status}' == 'PASS'    Press Keycode    4
 
 Open app signup
-    Open Application    http://localhost:4723/wd/hub
+    Open Application    http://localhost:4723
     ...    platformName=${PLATFORM_NAME}    
     ...    deviceName=${DEVICE_NAME}    
     ...    app=${APP}    

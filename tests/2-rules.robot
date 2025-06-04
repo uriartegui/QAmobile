@@ -13,8 +13,8 @@ Library    OperatingSystem
 
 *** Variables ***
 ${PLATFORM_NAME}        Android        #    Sistema operacional
-${DEVICE_NAME}          RXCW30BYHNL    #    Device do celular
-${APP}                  C:/Users/gu062480/QAmobile/base.apk        #    Diretorio do app
+${DEVICE_NAME}          emulator-5554    #    Device do celular
+${APP}                  C:/Users/uriarte/QAmobile/base.apk        #    Diretorio do app
 ${AUTOMATION_NAME}      UiAutomator2        #    Nome do Automation
 
 *** Test Cases ***
@@ -129,13 +129,15 @@ NDAFVG6 - Verificar evento de disparo com associação
     Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/bypassSwitch    40s
     Click Element    id=br.com.intelbras.guardian:id/bypassSwitch
 
-    Wait Until Element Is Visible    accessibility_id=Navegar para cima    40s
-    Click Element    accessibility_id=Navegar para cima
+    Sleep    5s
+
+    Wait Until Element Is Visible    accessibility_id=Navigate up    40s
+    Click Element    accessibility_id=Navigate up
 
     Sleep    5s
 
-    Wait Until Element Is Visible    accessibility_id=Navegar para cima    40s
-    Click Element    accessibility_id=Navegar para cima
+    Wait Until Element Is Visible    accessibility_id=Navigate up    40s
+    Click Element    accessibility_id=Navigate up
 
     Logo dashboard view
 
@@ -175,8 +177,8 @@ NDAFVG6 - Verificar evento de disparo com associação
 
     Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/dialToEmergencyButton    40s
 
-    Wait Until Element Is Visible    accessibility_id=Navegar para cima    40s
-    Click Element    accessibility_id=Navegar para cima
+    Wait Until Element Is Visible    accessibility_id=Navigate up    40s
+    Click Element    accessibility_id=Navigate up
 
     Wait Until Element Is Visible    accessibility_id=BOTTOM_NAV_BUTTON-Eventos    40s
 
@@ -201,8 +203,8 @@ Remove rule
     Wait Until Element Is Visible    id=android:id/button1    40s
     Click Element    id=android:id/button1
 
-    Wait Until Element Is Visible    accessibility_id=Navegar para cima    40s
-    Click Element    accessibility_id=Navegar para cima
+    Wait Until Element Is Visible    accessibility_id=Navigate up    40s
+    Click Element    accessibility_id=Navigate up
 
     Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/intelbrasLogo    40s
 
