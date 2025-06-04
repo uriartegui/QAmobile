@@ -153,8 +153,7 @@ NDAFVG6 - Verificar evento de disparo com associação
     ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    id=android:id/button1    60s
     Run Keyword If    '${status}' == 'PASS'    Click Element    id=android:id/button1
 
-    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/thumbnail    40s
-    Click Element    id=br.com.intelbras.guardian:id/thumbnail
+    Wait Until Keyword Succeeds    3x    5s    Click Element    id=br.com.intelbras.guardian:id/thumbnail
 
     Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/eventChip    40s
 
