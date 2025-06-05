@@ -12,11 +12,22 @@ Library    OperatingSystem
 
 *** Variables ***
 ${PLATFORM_NAME}        Android        #    Sistema operacional
-${DEVICE_NAME}          emulator-5554    #    Device do celular
-${APP}                  C:/Users/uriarte/QAmobile/base.apk        #    Diretorio do app
+${DEVICE_NAME}          RXCW30BYHNL    #    Device do celular
+${APP}                  C:/Users/gu062480/QAmobile/base.apk        #    Diretorio do app
 ${AUTOMATION_NAME}      UiAutomator2        #    Nome do Automation
 
 *** Test Cases ***
+Login successfully
+    [Tags]        login
+
+    Open app signup
+
+    Login sucessed
+    
+    Logo dashboard view
+
+    Close app
+
 QTJH1F1 - Criar novo Grupo pelo botão +
     [Tags]    add-group
 
@@ -97,22 +108,25 @@ QTJH1F7 - Excluir Grupo
 
     Button menu
 
-    Wait Until Element Is Visible    xpath=//android.view.ViewGroup[@content-desc="BUTTON-Grupos"]    40s
-    Click Element    xpath=//android.view.ViewGroup[@content-desc="BUTTON-Grupos"]
+    Wait Until Element Is Visible    accessibility_id=BUTTON-Grupos    40s
+    Click Element    accessibility_id=BUTTON-Grupos
 
-    Wait Until Element Is Visible    xpath=(//android.widget.ImageButton[@content-desc="POPUP_MENU-teste123"])[1]    40s
-    Click Element    xpath=(//android.widget.ImageButton[@content-desc="POPUP_MENU-teste123"])[1]
+    Wait Until Element Is Visible    accessibility_id=POPUP_MENU-teste123    40s
+    Click Element    accessibility_id=POPUP_MENU-teste123
 
-    Wait Until Element Is Visible    xpath=(//android.widget.LinearLayout[@resource-id="br.com.intelbras.guardian:id/content"])[2]    40s
-    Click Element    xpath=(//android.widget.LinearLayout[@resource-id="br.com.intelbras.guardian:id/content"])[2]
+    Wait Until Element Is Visible    accessibility_id=REMOVE_GROUP-TESTE123    40s
+    Click Element    accessibility_id=REMOVE_GROUP-TESTE123
 
-    Wait Until Element Is Visible    xpath=//android.widget.Button[@resource-id="android:id/button1"]    40s
-    Click Element    xpath=//android.widget.Button[@resource-id="android:id/button1"]
+    Wait Until Element Is Visible    id=android:id/button1    40s
+    Click Element    id=android:id/button1
 
-    Wait Until Element Is Visible    xpath=//android.widget.ImageButton[@content-desc="Navegar para cima"]    40s
-    Click Element    xpath=//android.widget.ImageButton[@content-desc="Navegar para cima"]
+    Run Keyword And Ignore Error    Wait Until Element Is Visible    accessibility_id=Navigate up    5s
+    Run Keyword And Ignore Error    Click Element    accessibility_id=Navigate up
 
-    Wait Until Element Is Visible    xpath=//android.widget.ImageView[@resource-id="br.com.intelbras.guardian:id/intelbrasLogo"]    40s
+    Run Keyword And Ignore Error    Wait Until Element Is Visible    accessibility_id=Navegar para cima    5s
+    Run Keyword And Ignore Error    Click Element    accessibility_id=Navegar para cima
+
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/intelbrasLogo    40s
 
     Close app
 
