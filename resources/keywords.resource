@@ -1,6 +1,6 @@
 *** Keywords ***
 Open app
-    Open Application    http://localhost:4723
+    Open Application    http://localhost:4723/wd/hub
     ...    platformName=${PLATFORM_NAME}    
     ...    deviceName=${DEVICE_NAME}    
     ...    app=${APP}    
@@ -14,7 +14,7 @@ Open app
     Run Keyword If    '${status}' == 'PASS'    Press Keycode    4
 
 Open app signup
-    Open Application    http://localhost:4723
+    Open Application    http://localhost:4723/wd/hub
     ...    platformName=${PLATFORM_NAME}    
     ...    deviceName=${DEVICE_NAME}    
     ...    app=${APP}    
@@ -90,3 +90,26 @@ Clicar se estiver visível
     [Arguments]    ${element_id}    ${timeout}=5s
     ${status}    ${msg}=    Run Keyword And Ignore Error    Wait Until Element Is Visible    ${element_id}    ${timeout}
     Run Keyword If    '${status}' == 'PASS'    Click Element    ${element_id}
+
+Swipe SeekBar By Id
+    [Arguments]    ${seekbar_id}    ${to}
+    ${element}=    Get Webelement    id=${seekbar_id}
+    ${location}=   Get Element Location    ${element}
+    ${size}=       Get Element Size        ${element}
+    ${y}=          Evaluate    ${location['y']} + (${size['height']} / 2)
+
+    IF    '${to}' == 'left'
+        ${start_x}=    Evaluate    ${location['x']} + (${size['width']} * 0.9)
+        ${end_x}=      Evaluate    ${location['x']} + (${size['width']} * 0.0)
+    ELSE IF    '${to}' == 'right'
+        ${start_x}=    Evaluate    ${location['x']} + (${size['width']} * 0.1)
+        ${end_x}=      Evaluate    ${location['x']} + (${size['width']} * 1.0)
+    END
+
+    Swipe    ${start_x}    ${y}    ${end_x}    ${y}    800
+
+Handle Layout Error
+    Click Element    id=android:id/button1
+    Sleep    1s
+    Wait Until Element Is Visible    id=br.com.intelbras.guardian:id/layoutParams    40s
+    Click Element    id=br.com.intelbras.guardian:id/layoutParams

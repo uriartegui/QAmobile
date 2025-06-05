@@ -12,8 +12,8 @@ Library    OperatingSystem
 
 *** Variables ***
 ${PLATFORM_NAME}        Android        #    Sistema operacional
-${DEVICE_NAME}          emulator-5554    #    Device do celular
-${APP}                  C:/Users/uriarte/QAmobile/base.apk        #    Diretorio do app
+${DEVICE_NAME}          RXCW30BYHNL    #    Device do celular
+${APP}                  C:/Users/gu062480/QAmobile/base.apk        #    Diretorio do app
 ${AUTOMATION_NAME}      UiAutomator2        #    Nome do Automation
 
 *** Test Cases ***
